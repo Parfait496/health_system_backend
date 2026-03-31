@@ -75,7 +75,7 @@ services:
   celery_beat:
     build: .
     container_name: rwanda_health_beat
-    command: celery -A health beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    command: celery -A health beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler --max-interval 10
     volumes:
       - .:/app
     env_file:
@@ -90,6 +90,7 @@ services:
       - web
       - redis
       - db
+    restart: always
 
 volumes:
   postgres_data:

@@ -116,7 +116,7 @@ static_root/
 *.pfx
 secrets/
 
-# ─── Node (if any frontend is added later) ────────────────────
+# ─── Node (if any frontend ────────────────────
 node_modules/
 npm-debug.log*
 yarn-debug.log*

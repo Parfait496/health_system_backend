@@ -99,6 +99,8 @@ DATABASES = {
         'OPTIONS': {
             'connect_timeout': 10,
         },
+        'CONN_MAX_AGE': 60,
+        'CONN_HEALTH_CHECKS': True,
     }
 }
 
