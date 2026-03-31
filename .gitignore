@@ -1,11 +1,131 @@
-venv/
-.env
+# ─── Python ───────────────────────────────────────────────────
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 *.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+wheels/
+
+# ─── Virtual environment ──────────────────────────────────────
+venv/
+env/
+ENV/
+.venv/
+.env_backup
+
+# ─── Environment variables — NEVER push these ─────────────────
+.env
+.env.prod
+.env.local
+.env.staging
+*.env
+
+# ─── Django ───────────────────────────────────────────────────
 db.sqlite3
-.DS_Store
-media/
-staticfiles/
+db.sqlite3-journal
 *.log
+local_settings.py
+staticfiles/
+media/
+
+# ─── Celery ───────────────────────────────────────────────────
 celerybeat-schedule
+celerybeat-schedule.db
+celerybeat.pid
+
+# ─── Docker ───────────────────────────────────────────────────
+# Keep docker-compose.yml and Dockerfile — push those
+# But ignore local override files
+docker-compose.override.yml
+
+# ─── Database dumps ───────────────────────────────────────────
+*.sql
+*.dump
+*.bak
+
+# ─── Coverage & testing ───────────────────────────────────────
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.pytest_cache/
+coverage.xml
+*.coveragerc
+nosetests.xml
+test-results/
+
+# ─── IDE and editors ──────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+*.sublime-project
+*.sublime-workspace
+.spyderproject
+.spyproject
+.ropeproject
+
+# ─── OS files ─────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── Logs ─────────────────────────────────────────────────────
+*.log
+logs/
+log/
+
+# ─── Uploads and user media ───────────────────────────────────
+media/
+uploads/
+
+# ─── Static collected files ───────────────────────────────────
+staticfiles/
+static_root/
+
+# ─── Jupyter notebooks ────────────────────────────────────────
+.ipynb_checkpoints
+*.ipynb
+
+# ─── Secrets and certificates ─────────────────────────────────
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+
+# ─── Node (if any frontend is added later) ────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ─── Compiled translations ────────────────────────────────────
+*.mo
+
+# ─── MyPy ─────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
